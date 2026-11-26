@@ -162,4 +162,125 @@ Download the checkpoint from the Google Drive link above and place it inside the
 
 ## 🚀 Running the Application
 
-After
+After completing the installation and checkpoint setup, run:
+
+```bash
+streamlit run app.py
+```
+
+The application will open in your default browser.
+
+If it does not open automatically, visit:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## 🖥️ How to Use the Application
+
+### 1. Choose Image Source
+
+The application provides two options:
+
+- **Sample Images:** Select from the available disaster image pairs.
+- **Upload Your Own:** Upload pre-disaster and post-disaster satellite images.
+
+### 2. Select or Upload Images
+
+For custom uploads, provide both images. Their dimensions must match.
+
+### 3. Analyze Building Damage
+
+Click the **Analyze Building Damage** button to run the model.
+
+The application processes the images using sliding-window inference and generates the predicted damage mask.
+
+### 4. View Results
+
+The results include:
+
+- Ground Truth Mask (when available for a sample).
+- Predicted Damage Mask.
+- Prediction Overlay.
+- Damage Class Legend.
+- Predicted Pixel-Area Distribution.
+
+### 5. Download Results
+
+Users can download:
+
+- Pre-disaster image.
+- Post-disaster image.
+- Predicted damage mask.
+- Color-coded prediction overlay.
+
+---
+
+## 📊 Prediction Method
+
+The application uses sliding-window inference to process satellite images.
+
+- Tile size: 512 × 512 pixels.
+- Overlap: 128 pixels.
+- Overlapping predictions are averaged to produce the final segmentation mask.
+- Each pixel is assigned to the class with the highest predicted score.
+
+The application also calculates the percentage of image pixels belonging to each damage class.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- PyTorch
+- Torchvision
+- Segmentation Models PyTorch
+- ResNet50
+- U-Net
+- NumPy
+- Pillow
+- Streamlit
+
+---
+
+## 📦 Requirements
+
+The required Python packages are listed in `requirements.txt`:
+
+```text
+streamlit>=1.35
+torch>=2.2
+torchvision>=0.17
+segmentation-models-pytorch>=0.3.3
+numpy>=1.24
+Pillow>=10
+```
+
+Python 3.10 or 3.11 is recommended.
+
+---
+
+## ⚠️ Important Notes and Limitations
+
+- Both input images must have identical dimensions.
+- The trained checkpoint must be present in the `checkpoints` folder.
+- Ground truth masks are available only for the provided sample images when included.
+- Uploaded images do not have ground truth masks.
+- Damage percentages represent pixel-area distribution, not verified building counts.
+- Model predictions are decision-support outputs and should be reviewed before being used for real-world decisions.
+
+---
+
+## 👩‍💻 Author
+
+**Aroona Noor**
+
+GitHub: [@aroona21](https://github.com/aroona21)
+
+---
+
+## 📜 License
+
+Add a license to this repository if you intend to distribute the project under specific reuse permissions.
