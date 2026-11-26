@@ -1,0 +1,35 @@
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Dataset files
+dataset/
+datasets/
+xbd_small/
+xbd_parquet_subset/
+
+# Model checkpoints (large files)
+checkpoints/
+*.pt
+*.pth
+*.h5
+*.onnx
+
+# Sample images
+sample_images/
+
+# Temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
