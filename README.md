@@ -136,13 +136,21 @@ BuildingDamageApp/
 
 ### Dataset Information
 
-The project uses satellite imagery from the xBD (xView2 Building Damage Assessment) dataset.
+The project uses satellite imagery from the **xBD (xView2 Building Damage Assessment) dataset**.
 
-The provided sample disaster images are included in the `sample_images` folder for testing the application. The complete dataset is not included because of its large size.
+The dataset contains pre-disaster and post-disaster satellite images with building damage annotations.
 
-If the complete dataset is required, it can be obtained from:
+The sample disaster images used for testing the application are available in the following Google Drive folder:
 
-[INSERT DATASET DOWNLOAD LINK HERE]
+**[Download Sample Disaster Images from Google Drive](https://drive.google.com/drive/folders/1U9uNDayp_sLStT2NGGkMjIsXhIdGVnhd?usp=sharing)**
+
+The folder contains sample disaster image pairs and available ground-truth masks organized by disaster scenario.
+
+The complete xBD dataset is not included in the project because of its large size. It can be accessed through:
+
+[Access the xBD Dataset on Hugging Face](https://huggingface.co/datasets/kshitijrajsharma/xview2-xbd)
+
+[Official xView2 Dataset Website](https://xview2.org/)
 
 ---
 
@@ -266,10 +274,6 @@ When the application works correctly, users should see the original satellite im
 
 The application also displays the percentage distribution of pixels belonging to each damage class.
 
-**Application Screenshot:**
-
-[INSERT A SCREENSHOT OF YOUR RUNNING STREAMLIT APPLICATION HERE]
-
 ---
 
 # 6. File and Folder Descriptions
@@ -356,11 +360,11 @@ The application calculates the percentage of image pixels belonging to each dama
 
 ---
 
-## Author
+## Authors
 
-**Aroona Noor**
-
+**Aroona Noor**  
 **Zahra Khan**
+
 GitHub: https://github.com/aroona21
 
 ---
